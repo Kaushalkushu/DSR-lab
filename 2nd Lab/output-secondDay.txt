@@ -1,0 +1,90 @@
+> BuffTail <- c(10, 1, 37, 5, 12)
+> GardenBee <- c(8, 3, 9, 6, 4)
+> RedTail <- c(18, 9, 12, 4, 7)
+> CarderBee <- c(8, 27, 6, 32, 23)
+> HoneyBee <- c(12, 13, 16, 9, 10)
+> 
+> 
+> df <- data.frame(BuffTail, GardenBee, RedTail, CarderBee, HoneyBee, row.names = c("Thistle", "Vipers", "Golden Rain", "Yellowalfala", "Blackberry"))
+> 
+> colnames(df) <- c("BuffTail", "GardenBee", "RedTail", "CarderBee", "HoneyBee")
+> df
+             BuffTail GardenBee RedTail CarderBee HoneyBee
+Thistle            10         8      18         8       12
+Vipers              1         3       9        27       13
+Golden Rain        37         9      12         6       16
+Yellowalfala        5         6       4        32        9
+Blackberry         12         4       7        23       10
+> 
+> mat <- data.matrix(df)
+> mat
+             BuffTail GardenBee RedTail CarderBee HoneyBee
+Thistle            10         8      18         8       12
+Vipers              1         3       9        27       13
+Golden Rain        37         9      12         6       16
+Yellowalfala        5         6       4        32        9
+Blackberry         12         4       7        23       10
+> colnames(mat)
+[1] "BuffTail"  "GardenBee" "RedTail"   "CarderBee" "HoneyBee" 
+> 
+> mat2 <- mat
+> colnames(mat2) <- c(NULL, NULL, NULL, NULL, NULL)
+> colnames(mat2)
+NULL
+> lis <- list(1:5)
+> mat2
+             [,1] [,2] [,3] [,4] [,5]
+Thistle        10    8   18    8   12
+Vipers          1    3    9   27   13
+Golden Rain    37    9   12    6   16
+Yellowalfala    5    6    4   32    9
+Blackberry     12    4    7   23   10
+> 
+> lis[1] <- list(mat2[1,])
+> lis[2] <- list(mat2[2,])
+> lis[3] <- list(mat2[3,])
+> lis[4] <- list(mat2[4,])
+> lis[5] <- list(mat2[5,])
+> 
+> lis
+[[1]]
+[1] 10  8 18  8 12
+
+[[2]]
+[1]  1  3  9 27 13
+
+[[3]]
+[1] 37  9 12  6 16
+
+[[4]]
+[1]  5  6  4 32  9
+
+[[5]]
+[1] 12  4  7 23 10
+
+> 
+> number <- 12
+> stri <- "Any String"
+> realNo <- 123.453
+> 
+> thirdB <- list(number, stri, realNo)
+> thirdB
+[[1]]
+[1] 12
+
+[[2]]
+[1] "Any String"
+
+[[3]]
+[1] 123.453
+
+> names(thirdB) <- c("Integer", "String", "Real Number")
+> thirdB
+$Integer
+[1] 12
+
+$String
+[1] "Any String"
+
+$`Real Number`
+[1] 123.453

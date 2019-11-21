@@ -1,0 +1,6 @@
+a)Bottle are Being produced with mean as 150 cc and std deviation of 2 cc
+ Samples of 100 bottles show the mean as 152. Has the mean value changed check with  95% confidence interval.calculate pnorm,dnorm values of the result obtained.
+
+b)In a Health survey of schoolchildren,it is found  that the mean heamoglobin level of 55 boys is 11  per 100ml with a std deviation of 2.1.Can we consider  this group as taken from a population with a mean of 10.2 g/100ml.
+Given n=55 ,Mean of sample : xmean=11.0 g/100ml ;Std deviation of sample   S=2.1 g/100ml and 
+ Mean of Population ?? =10.2 g/100ml
